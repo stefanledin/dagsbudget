@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    form
+        label(for="amount") Pengar på kontot?
+        input(type="number", placeholder="0")#amount
+        label(for="payday") Löning
+        input(type="date", value=today)#payday
+    p Din dagliga budget är 
+        span#budget 0
+        |  kr
+
+block footer
+    script(src="./javascripts/app.js")
